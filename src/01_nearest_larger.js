@@ -1,19 +1,27 @@
-
 function nearestLarger(arr, i) {
-  var i;
-  var arr = [];
-  var x = i + 1;
-  //console.log('ehllo');
-   for (var j = i - 1; j >= 0; i--) {
-       if (arr[i] < arr[j]) {
-           return j;
-           console.log(j);
-       } else if (arr[i] < arr[x]) {
-           return x;
-           console.log(x);
-       }
-       x++;
-   }
+
+  //oneOff digit
+  var oneOff = 1;
+  
+  //right variable
+  var x = i;
+
+  //left variable
+  var j = i;
+
+  while (j >= 0 || x < arr.length) {
+    j = i - oneOff;
+    x = i + oneOff;
+    if (j >= 0 && arr[j] > arr[i]) {
+      return j;
+    } else if (x < arr.length && arr[x] > arr[i]) {
+      return x;
+    }
+
+    oneOff += 1;
+  }
+
+  return null;
 
 }
 
