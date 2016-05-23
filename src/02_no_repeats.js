@@ -1,4 +1,5 @@
 function noRepeats(yearStart, yearEnd) {
+//<<<<<<< HEAD
   var years =[];
  var testYear =+yearStart;
   var yearsDifference = +(yearEnd-yearStart);
@@ -19,4 +20,9 @@ function noRepeat(year){
      }
          return true;
      }
+=======
+
+}
+
+//>>>>>>> 8fbe2e5ae41ee0b7a46e55d31d87fc0b13ce84bd
 module.exports = noRepeats;
